@@ -30,7 +30,6 @@ if ("development" !== 'production' && typeof window !== 'undefined' && typeof do
       if (errors.every(function (e) {
         return typeof e === 'string';
       })) {
-        console.warn(type, errors);
       }
     }
   };

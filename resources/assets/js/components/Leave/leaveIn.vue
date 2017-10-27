@@ -5,7 +5,7 @@
 		<div class="content">
 			<el-form label-width="80px" class="demo-ruleForm" :model="formData" :rules="rules" ref="formData">
 
-				<el-form-item label="姓名" prop="name">
+				<el-form-item label="姓名" prop="name" min-width="">
 					<el-input placeholder="请输入内容" v-model.trim="formData.name" class="name"></el-input>
 				</el-form-item>
 
@@ -268,6 +268,7 @@
 	}
 	.my_submit {
 		  width: 100%;
+		  height: 50px;
 	}
 	.juzhong {
 		text-align: center;

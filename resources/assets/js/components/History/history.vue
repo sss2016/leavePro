@@ -137,7 +137,12 @@
 	
 </script>
 
-<style>
+<style scoped>
+	@media screen and (max-width: 500px){
+		.el-form-item{
+			width: 100%;
+		}
+	}
 	.content {
 		margin: 10px;
 		text-align: center;

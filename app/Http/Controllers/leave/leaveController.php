@@ -59,9 +59,9 @@ class leaveController extends Controller
 		->insertGetId($leave_user);
 		
 		if($user_id) {
-			$this->sms_send($leave_user);
+			// $this->sms_send($leave_user);
 
-			return json_encode(['code'=>0,'msg'=>'报名成功']);
+			return json_encode(['code'=>0,'msg'=>'备案成功']);
 		}
 	}
 

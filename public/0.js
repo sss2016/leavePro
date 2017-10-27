@@ -29,12 +29,12 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Leave\\leaveIn.vue"
+Component.options.__file = "resources/assets/js/components/Leave/leaveIn.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -63,13 +63,13 @@ var content = __webpack_require__(138);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("7d78c0ac", content, false);
+var update = __webpack_require__(10)("04bb2b8e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.7@css-loader/index.js!../../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53b7dcec\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/selector.js?type=styles&index=0&bustCache!./leaveIn.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.7@css-loader/index.js!../../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53b7dcec\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/selector.js?type=styles&index=0&bustCache!./leaveIn.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53b7dcec\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./leaveIn.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53b7dcec\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./leaveIn.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -179,10 +179,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			},
 			rules: {
 				name: [{ required: true, message: '请输入姓名', trigger: 'blur' }, { min: 2, max: 5, message: '长度在 2 到 5 个字符', trigger: 'blur' }],
-				category: [{ required: true, message: '请选择活动资源', trigger: 'change' }],
-				group: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
-				date: [{ type: 'date', required: true, message: '请选择日期', trigger: 'change' }],
-				time: [{ type: 'date', required: true, message: '请选择时间', trigger: 'change' }],
+				// category: [{ required: true, message: '请选择活动资源', trigger: 'blur' }],
+				group: [{ required: true, message: '请选择活动区域', trigger: 'blur' }],
+				date: [{ type: 'date', required: true, message: '请选择日期', trigger: 'blur' }],
+				time: [{ type: 'date', required: true, message: '请选择时间吧', trigger: 'change' }],
 				reason: [{ required: true, message: '请填写活动形式', trigger: 'blur' }, { min: 2, max: 50, message: '长度在 2 到 50 个字', trigger: 'blur' }]
 			},
 			options: [{
@@ -363,7 +363,7 @@ var render = function() {
             [
               _c(
                 "el-form-item",
-                { attrs: { label: "姓名", prop: "name" } },
+                { attrs: { label: "姓名", prop: "name", "min-width": "" } },
                 [
                   _c("el-input", {
                     staticClass: "name",
@@ -618,7 +618,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-53b7dcec", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-53b7dcec", module.exports)
   }
 }
 
